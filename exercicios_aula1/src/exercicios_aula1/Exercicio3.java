@@ -27,7 +27,8 @@ public class Exercicio3 {
 		salarioLiquido = salarioBruto + adicionalNoturno + (horasExtras * 5) - Descontos;
 		
 		System.out.println("O valor do salário líquido é: " + df.format(salarioLiquido));
-			
+		
+		
 	}
 
 }
