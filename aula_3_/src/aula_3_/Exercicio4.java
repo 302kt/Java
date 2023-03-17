@@ -37,8 +37,14 @@ public class Exercicio4 {
 		genero = leia.nextInt();
 		
 		
-		if (idade > 40 && categoria == 3 && genero == 2)
+			if (idade > 40 && categoria == 3 && genero == 2)
 			PMH40 ++;
+			if (idade < 30 && categoria == 4 && genero == 1)
+				PFSM30 ++;
+			if (categoria == 2 && genero == 1)
+				PFM ++;
+			if (categoria == 1)
+				PB ++;
 		
 		System.out.println("Deseja prosseguir para leitura de outro colaboradore? ");
 		resposta = leia.next().toUpperCase().charAt(0);
@@ -48,7 +54,10 @@ public class Exercicio4 {
 
 		}
 		 
-		System.out.println("O número de homens desenvolvedores Mobile maiores de 40 anos é: " + PMH40);
+		System.out.println("Total de homens desenvolvedores Mobile maiores de 40 anos: " + PMH40);
+		System.out.println("Total de pessoas desenvolvedoras Backend: " + PB);
+		System.out.println("Total de mulheres desenvolvedoras FullStack menores de 30 anos: " + PFSM30);
+		System.out.println("Total de mulheres desenvolvedoras Frontend: " + PFM);
 		
 	}
 
