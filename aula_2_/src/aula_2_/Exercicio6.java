@@ -17,13 +17,16 @@ public class Exercicio6 {
 		System.out.println("Informe o nome do colaborador: ");
 		nome = leia.nextLine();
 		
-		System.out.println("Informe o número correspondente ao cargo: ");
+		System.out.println("Opções de profissão");
+		System.out.println("----------------------------");
 		System.out.println("1\t para Gerente");
 		System.out.println("2\t para Vendedor");
 		System.out.println("3\t para Supervisor");
 		System.out.println("4\t para Motorista");
 		System.out.println("5\t para Estoquista");
 		System.out.println("6\t para Técnico de TI");
+		System.out.println("----------------------------");
+		System.out.println("Informe o número correspondente ao cargo: ");
 		
 		codigo = leia.nextInt();
 		
