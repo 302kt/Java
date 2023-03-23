@@ -23,7 +23,7 @@ public class Exercicio1EstruturadeDados {
 			
 			if (opcao > 3) {
 				System.out.println("Opção inválida");
-				System.exit(0);
+				
 			}
 			
 		switch (opcao) {
