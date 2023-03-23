@@ -13,6 +13,14 @@ public class Exercicio4 {
 		
 		 	numeros.add(34);
 	        numeros.add(100);
+	        numeros.add(20);
+	        numeros.add(21);
+	        numeros.add(24);
+	        numeros.add(200);
+	        numeros.add(300);
+	        numeros.add(500);
+	        numeros.add(400);
+	        numeros.add(8);
 	        
 	        
 		System.out.println("Informe um número");
