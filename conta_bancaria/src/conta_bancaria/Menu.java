@@ -2,6 +2,7 @@ package conta_bancaria;
 
 import java.util.Scanner;
 
+import conta.model.conta;
 import conta.util.Cores;
 
 public class Menu {
@@ -11,9 +12,16 @@ public class Menu {
 
 
 		Scanner leia = new Scanner(System.in); 
+		
 		int opcao, numero, agencia, tipo, aniversario, numeroDestino;
 		String titular;
 		float saldo, limite, valor;
+		conta c1 = new conta(1, 123, 1, "Katarina Pereira", 100000.00f);
+		c1.visualizar();
+		
+		c1.sacar(500000.0f);
+		
+		
 		while (true) {
 
 			System.out.println(Cores.TEXT_CYAN + Cores.ANSI_BLACK_BACKGROUND + "************************************************");
