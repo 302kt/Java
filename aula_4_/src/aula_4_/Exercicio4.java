@@ -24,5 +24,5 @@ public class Exercicio4 {
 		for (int contador = 0; contador < matrizFloat.length; contador ++) {
 
 	}
-
+	}
 }
