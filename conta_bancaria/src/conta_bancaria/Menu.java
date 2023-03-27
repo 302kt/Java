@@ -2,6 +2,7 @@ package conta_bancaria;
 
 import java.util.Scanner;
 
+import conta.model.ContaCorrente;
 import conta.model.conta;
 import conta.util.Cores;
 
@@ -17,10 +18,13 @@ public class Menu {
 		String titular;
 		float saldo, limite, valor;
 		conta c1 = new conta(1, 123, 1, "Katarina Pereira", 100000.00f);
+		ContaCorrente cc1 = new ContaCorrente(2, 123, 1, "Katarina Freire", 1000.0f, 100.00f);
+		cc1.visualizar();
 		c1.visualizar();
 		
 		c1.sacar(500000.0f);
 		
+		c1.depositar(300.0f);
 		
 		while (true) {
 
