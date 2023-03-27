@@ -29,5 +29,10 @@ public class ContaCorrente extends conta {
 		return true; 
 	}
 	
+	@Override
+	public void visualizar(){
+		super.visualizar();
+		System.out.println("Limite de Crédito: " + this.limite);
+	}
 	
 }
