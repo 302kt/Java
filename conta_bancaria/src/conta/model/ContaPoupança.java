@@ -19,6 +19,7 @@ public class ContaPoupança extends conta {
 	}
 
 	public void visualizar() {
-		
+		super.visualizar();
+		System.out.println("Aniversário da conta: " + this.aniversario);
 	}
 }
