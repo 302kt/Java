@@ -115,64 +115,43 @@ public class Menu {
 				System.out.println("Digite o número da conta: ");
 				numero = leia.nextInt();
 
-				tipo = 1;
-				// condicional buscar na collection
-
-				System.out.println("Digite o Numero da Agência: ");
-				agencia = leia.nextInt();
-				System.out.println("Digite o Nome do Titular: ");
-				leia.skip("\\R?");
-				titular = leia.nextLine();
-
-				System.out.println("Digite o Saldo da Conta (R$): ");
-				saldo = leia.nextFloat();
-
-				// retornar tipo
-
-				switch (tipo) {
-				case 1 -> {
-					System.out.println("Digite o Limite de Crédito (R$): ");
-					limite = leia.nextFloat();
-
-					// criar o objeto conta corrente
-				}
-				case 2 -> {
-					System.out.println("Digite o dia do Aniversario da Conta: ");
-					aniversario = leia.nextInt();
-
-					// criar o objeto conta poupanca
-
-				}
-				default -> {
-					System.out.println("Tipo de conta inválido!");
-				}
-				}
 
 			}
 
 			case 5 -> {
+				System.out.println("Apagar a Conta\n\n");
 				System.out.println("Digite o número da conta: ");
 				numero = leia.nextInt();
+				contas.deletar(numero);
+				keyPress();
+				break;
 			}
 			case 6 -> {
-				System.out.println("Depósito\n\n ");
-				
+				System.out.println("Saque\n\n");
 				System.out.println("Digite o número da conta: ");
 				numero = leia.nextInt();
-				
-				System.out.println("Digite o valor do saque: ");
+
+				System.out.println("Digite o valor do saque");
 				valor = leia.nextFloat();
+
+				contas.sacar(numero, valor);
+
+				keyPress();
+				break;
 			}
 			case 7 -> {
-				System.out.println("Depósito\n\n ");
-				
+				System.out.println("Depósito\n\n");
 				System.out.println("Digite o número da conta: ");
 				numero = leia.nextInt();
-				
-				System.out.println("Digite o valor do deposito: ");
+				System.out.println("Digite o valor do depósito");
 				valor = leia.nextFloat();
+
+				contas.depositar(numero, valor);
+				keyPress();
+				break;
 			}
 			case 8 -> {
+				System.out.println("Transferência entre Contas\n\n");
 				System.out.println("Digite o Numero da Conta de Origem: ");
 				numero = leia.nextInt();
 				System.out.println("Digite o Numero da Conta de Destino: ");
@@ -182,10 +161,21 @@ public class Menu {
 					System.out.println("Digite o Valor da Transferência (R$): ");
 					valor = leia.nextFloat();
 				} while (valor <= 0);
-			}
 
+				contas.transferir(numero, numeroDestino, valor);
+				keyPress();
+				
+				break;
+				
 			}
-		}	
+			
+				default -> {
+				System.out.println("\nOpção Inválida!");
+				keyPress();
+				break;
+				}
+			}	
+		}		
 		
 	
 }
